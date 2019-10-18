@@ -62,11 +62,11 @@ def message_handler(event):
         # Obtenemos el mensaje de la variable event y se lo regresamos al usuario
         print(event.message_text)
         resp = check_for_greeting(event.message_text) + "!"
-        page.send(sender_id, "AdsoftBot says: {}".format(resp))
+        page.send(sender_id, "Luisbot dice: {}".format(resp))
         #page.send(sender_id, "AdsoftBot says: {}".format(check_for_greeting(event.message_text)))
 
     elif event.is_attachment_message:
-        page.send(sender_id, "Boo, you didn't send a text. ")
+        page.send(sender_id, "Ups, no enviaste un texto. ")
 
 
 if __name__ == '__main__':
